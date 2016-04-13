@@ -63,3 +63,20 @@ when the user clicks on the dropdown button) */
 .show {display:block;}
 
 /* end dropdown button ==============================================*/
+
+/* soundmanager css ==================================================*/
+.seekBase {
+  height: 30px;
+  width: 90%;
+  border: 1px solid #cccccc;
+}
+.seekLoad {
+	height: 30px;
+  width: 0;
+  background-color: #E0EAF1;
+}
+
+li {
+	cursor: pointer;
+}
+/* end soundmanager css ==================================================*/
