@@ -25,8 +25,8 @@ myApp.config(["$routeProvider", function($routeProvider){
           templateUrl: "/assets/views/routes/favorites.html",
           controller: "EpisodeController"
       })
-      .when("/audioplayer", {
-          templateUrl: "/assets/views/routes/audioplayer.html",
+      .when("/playEpisode", {
+          templateUrl: "/assets/views/routes/playOneEpisode.html",
           controller: "EpisodeController"
       })
       .when("/episode", {

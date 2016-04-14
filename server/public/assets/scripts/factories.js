@@ -3,53 +3,57 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
     var favoritesData = {};
     var nightfallData = [];
     var vpointData = [];
-    var playEpisode = {};
+    // var playEpisode = {};
+    var thisEpisode = {};
+    var playEpisode = [];
     var epName = "";
-    var urlStart = "https://ia802707.us.archive.org/35/items/Nightfall-cbcRadioProgram-episodesMp3Format/";
-    var episodeURL = "";
 
 
+    var openEpisode = function(data) {
+      thisEpisode.data = data;
+      var dataObject = thisEpisode.data;
+      playEpisode.push(dataObject);
+      console.log("playEpisode", playEpisode);
 
-    //test variable
-    var theUrl = "Nightfall_CBC_83-04-29_30_After_Sunset.mp3";
-
-
-    //get data from button clicked on nightfall page
-    var openEpisode = function(data){
-        console.log('openEpisode data ', data);
-        playEpisode.data = data;
-        console.log('playEpisode object ', playEpisode);
-        console.log('playEpisode.data.name: ', playEpisode.data.name);
-        epName = playEpisode.data.name;
+      // playEpisode.push(song);
+      // console.log(data);
+      // thisEpisode.data = data;
+      // console.log(thisEpisode.data);
+      //   for (var i = 0; i < thisEpisode.data.length; i++) {
+      //     var song = thisEpisode.data[i];
+      //     playEpisode.push(song);
+      //   }
+        console.log("playEpisode", playEpisode);
         audioPage(playEpisode);
-        createURL();
     };
+
+    // get data from button clicked on nightfall page
+    // var openEpisode = function(data){
+    //     console.log('openEpisode data ', data);
+    //     playEpisode.data = data;
+    //     console.log('playEpisode object ', playEpisode.data);
+    //     console.log('playEpisode.data.name: ', playEpisode.data.name);
+    //     epName = playEpisode.data.name;
+    //     audioPage(playEpisode);
+    //     console.log(playEpisode);
+    // };
 
     //redirect to audioplayer
     var audioPage = function(data){
       if(data !== null){
-        $location.path("/audioplayer");
+        $location.path("/playEpisode");
       };
     };
 
-    //create URL to episode
-    var createURL = function(){
-      console.log(playEpisode.data.name);
-      // episodeURL = urlStart + playEpisode.data.name;
-      playEpisode.episodeURL = urlStart + playEpisode.data.name;
-      console.log('episodeURL ', episodeURL);
-    }
 
     var getNightfall = function() {
       $http.get('/nightfall').then(function(response){
-        // nightfallData.allShows = response.data;
+        console.log(response);
         for (var i = 0; i < response.data.length; i++) {
           var song = response.data[i];
           nightfallData.push(song);
         }
         console.log(nightfallData);
-
-        // console.log("nightfall in factory", nightfallData.allShows);
       });
     };
 
@@ -97,13 +101,10 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
 
     return {
-      theUrl: theUrl,
 
       openEpisode: openEpisode,
       playEpisode: playEpisode,
       epName: epName,
-      episodeURL: episodeURL,
-      createURL: createURL,
 
       getNightfall: getNightfall,
       nightfallData: nightfallData,

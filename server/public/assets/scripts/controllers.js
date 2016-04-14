@@ -1,13 +1,9 @@
 myApp.controller('MainCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
     var heroService = HeroService;
 
-
+    //get data from Nightfall
     heroService.getNightfall();
-    var song = heroService.nightfallData;
-    console.log(heroService.nightfallData);
-    console.log('song ', song);
     $scope.songs = heroService.nightfallData;
-    console.log($scope.songs);
 }]);
 
 // myApp.controller('MainCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
@@ -70,8 +66,9 @@ function($scope, HeroService, $http, $location){
   $scope.theUrl = heroService.theUrl;
 
   heroService.getNightfall();
+  //data for nightfall page
   $scope.nightfallArray = heroService.nightfallData;
-  console.log($scope.nightfallArray);
+
 
   heroService.getVpoint();
   $scope.vpointArray = heroService.vpointData;
@@ -80,14 +77,6 @@ function($scope, HeroService, $http, $location){
   $scope.openEpisode = heroService.openEpisode;
   // $scope.episodePick = heroService.playEpisode;
   $scope.episode = heroService.playEpisode;
-  // console.log('playEpisode ', heroService.playEpisode);
-  // console.log("Episode url: ", $scope.episode.episodeURL);
-
-
-  // $scope.episodeURL = $sce.trustAsResourceUrl(heroService.playEpisode.episodeURL);
-  // $scope.episodeURL = heroService.playEpisode.episodeURL;
-
-  // console.log("Sanitized url", $scope.episodeURL);
 
 
 
