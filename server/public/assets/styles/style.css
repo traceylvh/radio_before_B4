@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   margin: auto;
-  background-color: #ccc;
+  background-color: #fff;
   padding-bottom: 50px;
 }
 
@@ -66,12 +66,12 @@ when the user clicks on the dropdown button) */
 
 /* soundmanager css ==================================================*/
 .seekBase {
-  height: 30px;
+  height: 10px;
   width: 90%;
   border: 1px solid #cccccc;
 }
 .seekLoad {
-	height: 30px;
+	height: 10px;
   width: 0;
   background-color: #E0EAF1;
 }
@@ -80,3 +80,23 @@ li {
 	cursor: pointer;
 }
 /* end soundmanager css ==================================================*/
+
+/* round button */
+.round-button {
+    display:block;
+    width:20px;
+    height:20px;
+    line-height: 15px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+    font-size:15;
+    /*font-weight:bold;*/
+}
+.round-button:hover {
+    background: #fff;
+}

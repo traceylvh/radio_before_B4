@@ -41,8 +41,8 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
     var getNightfall = function() {
       $http.get('/nightfall').then(function(response){
         // console.log(response.data);
-        nightfallData.allNightfall = response.data;
-        console.log("nightfall in factory", nightfallData.allNightfall);
+        nightfallData.allShows = response.data;
+        // console.log("nightfall in factory", nightfallData.allShows);
       });
     };
 
