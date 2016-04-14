@@ -8,6 +8,8 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
     var urlStart = "https://ia802707.us.archive.org/35/items/Nightfall-cbcRadioProgram-episodesMp3Format/";
     var episodeURL = "";
 
+
+
     //test variable
     var theUrl = "Nightfall_CBC_83-04-29_30_After_Sunset.mp3";
 
@@ -40,8 +42,13 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
     var getNightfall = function() {
       $http.get('/nightfall').then(function(response){
-        // console.log(response.data);
-        nightfallData.allShows = response.data;
+        // nightfallData.allShows = response.data;
+        for (var i = 0; i < response.data.length; i++) {
+          var song = response.data[i];
+          nightfallData.push(song);
+        }
+        console.log(nightfallData);
+
         // console.log("nightfall in factory", nightfallData.allShows);
       });
     };
@@ -123,7 +130,7 @@ myApp.factory("SweetFactory", function(){
    var something = "https://ia802707.us.archive.org/35/items/Nightfall-cbcRadioProgram-episodesMp3Format/Nightfall_CBC_80-10-10_15_Special_Services.mp3";
 
    return {
-       something : something
+       something
    };
 });
 
