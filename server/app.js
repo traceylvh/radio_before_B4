@@ -38,7 +38,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //MONGO SETUP
-var mongoURI = "mongodb://localhost/radio_before";
+var mongoURI =
+ process.env.MONGOLAB_URI ||
+ process.env.MONGOHQ_URL ||
+ 'mongodb://localhost/radio_before';
+
+// var mongoURI = "mongodb://localhost/radio_before";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on("error", function(err){

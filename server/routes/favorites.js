@@ -16,9 +16,9 @@ router.get("/", function(req, res){
 router.post("/", function(req, res){
     var addedFavorite = new Favorites({
       "title": req.body.title,
-      "name": req.body.name,
-      "length": req.body.length,
-      "description": req.body.description
+      "id": req.body.id,
+      "artist": req.body.artist,
+      "url": req.body.url
     });
 
     addedFavorite.save(function(err, data){
