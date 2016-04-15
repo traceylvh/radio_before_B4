@@ -7,8 +7,8 @@ myApp.controller('MainCtrl', ['$scope', 'HeroService', function ($scope, HeroSer
 
 
     //TODO-tv create second page to play vpoint single ep with its own controller
-    heroService.getVpoint();
-    $scope.songs = heroService.vpointData;
+    // heroService.getVpoint();
+    // $scope.songs = heroService.vpointData;
 }]);
 
 myApp.controller('SingleEpCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
