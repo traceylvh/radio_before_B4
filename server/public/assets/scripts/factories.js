@@ -3,40 +3,19 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
     var favoritesData = {};
     var nightfallData = [];
     var vpointData = [];
-    // var playEpisode = {};
     var thisEpisode = {};
     var playEpisode = [];
-    var epName = "";
 
 
+    //when "play" button is clicked on a show page
     var openEpisode = function(data) {
       thisEpisode.data = data;
       var dataObject = thisEpisode.data;
       playEpisode.push(dataObject);
-      console.log("playEpisode", playEpisode);
-
-      // playEpisode.push(song);
-      // console.log(data);
-      // thisEpisode.data = data;
-      // console.log(thisEpisode.data);
-      //   for (var i = 0; i < thisEpisode.data.length; i++) {
-      //     var song = thisEpisode.data[i];
-      //     playEpisode.push(song);
-      //   }
-        console.log("playEpisode", playEpisode);
+      // console.log("playEpisode", playEpisode);
         audioPage(playEpisode);
     };
 
-    // get data from button clicked on nightfall page
-    // var openEpisode = function(data){
-    //     console.log('openEpisode data ', data);
-    //     playEpisode.data = data;
-    //     console.log('playEpisode object ', playEpisode.data);
-    //     console.log('playEpisode.data.name: ', playEpisode.data.name);
-    //     epName = playEpisode.data.name;
-    //     audioPage(playEpisode);
-    //     console.log(playEpisode);
-    // };
 
     //redirect to audioplayer
     var audioPage = function(data){
@@ -48,12 +27,12 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
     var getNightfall = function() {
       $http.get('/nightfall').then(function(response){
-        console.log(response);
+        // console.log(response);
         for (var i = 0; i < response.data.length; i++) {
           var song = response.data[i];
           nightfallData.push(song);
         }
-        console.log(nightfallData);
+        // console.log(nightfallData);
       });
     };
 
@@ -73,7 +52,7 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
     var postData = function(data){
         $http.post("/userInfo", data).then(function(response){
-          console.log("here is the", response.data);
+          // console.log("here is the", response.data);
           getData();
         });
     };
@@ -104,7 +83,6 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
       openEpisode: openEpisode,
       playEpisode: playEpisode,
-      epName: epName,
 
       getNightfall: getNightfall,
       nightfallData: nightfallData,
