@@ -44,8 +44,8 @@ app.use(passport.session());
 
 var mongoURI = 'mongodb://localhost/radio_before';
 
-// var mongoURI = "ds025180.mlab.com:25180/radio_before";
-var MongoDB = mongoose.connect(mongoURI).connection;
+var mongoURI = "ds025180.mlab.com:25180/radio_before";
+// var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on("error", function(err){
     console.log("Mongo Connection Error: ", err);
