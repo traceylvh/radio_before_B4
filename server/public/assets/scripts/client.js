@@ -13,7 +13,7 @@ myApp.config(["$routeProvider", function($routeProvider){
           templateUrl: "/assets/views/routes/view.html",
           controller: "ShowController"
       })
-      .when("/nightfall/", {
+      .when("/nightfall", {
           templateUrl: "/assets/views/routes/nightfall.html",
           controller: "EpisodeController"
       })

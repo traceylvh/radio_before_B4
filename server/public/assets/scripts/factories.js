@@ -28,11 +28,16 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
     var getNightfall = function() {
       $http.get('/nightfall').then(function(response){
         // console.log(response);
+        // nightfallData = [];
+        // console.log("nightfallData", nightfallData);
         for (var i = 0; i < response.data.length; i++) {
           var song = response.data[i];
           nightfallData.push(song);
+          // console.log("nightfallData after push", nightfallData);
+          // return nightfallData;
+          // console.log("return nightfallData", nightfallData);
         }
-        // console.log(nightfallData);
+
       });
     };
 
