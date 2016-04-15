@@ -43,7 +43,10 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
 
     var getVpoint = function() {
       $http.get('/vpoint').then(function(response){
-        vpointData.allVpoint = response.data;
+        for (var i = 0; i < response.data.length; i++) {
+          var song = response.data[i];
+          vpointData.push(song);
+        }
       });
     };
 

@@ -4,6 +4,11 @@ myApp.controller('MainCtrl', ['$scope', 'HeroService', function ($scope, HeroSer
     //get data from Nightfall
     heroService.getNightfall();
     $scope.songs = heroService.nightfallData;
+
+
+    //TODO-tv create second page to play vpoint single ep with its own controller
+    heroService.getVpoint();
+    $scope.songs = heroService.vpointData;
 }]);
 
 myApp.controller('SingleEpCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
