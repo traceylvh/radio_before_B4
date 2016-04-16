@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", ["ngRoute", "ngSanitize", "angularSoundManager"]);
+var myApp = angular.module("myApp", ["ngRoute", "ngSanitize", "angularSoundManager", "simple-accordion"]);
 
 myApp.config(["$routeProvider", function($routeProvider){
     $routeProvider
