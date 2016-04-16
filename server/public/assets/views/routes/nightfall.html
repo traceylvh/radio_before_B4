@@ -1,18 +1,20 @@
-<h1>NNNNightfall!</h1>
-  <div ng-repeat="item in nightfallArray | orderBy: 'title' ">
-    <div >
-      <h4>
-          {{ item.title }}
-      </h4>
+<div >
+  <h1>Nightfall</h1>
+    <div ng-repeat="item in nightfallArray | orderBy: 'title' ">
+      <div >
+        <h4>
+            {{ item.title }}
+        </h4>
 
 
-      <p>
-          {{ item.artist }}
-      </p>
+        <p>
+            {{ item.artist }}
+        </p>
 
-<button ng-click="saveFavorite(item)">favorite</button>
-<button ng-click="openEpisode(item)">play</button>
+  <button ng-click="saveFavorite(item)">favorite</button>
+  <button ng-click="openEpisode(item)">play</button>
+
+      </div>
 
     </div>
-
-  </div>
+</div>
