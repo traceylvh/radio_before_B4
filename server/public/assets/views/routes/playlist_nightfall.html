@@ -51,9 +51,14 @@
                       <a remove-from-playlist="song" data-index="{{$index}}">
                           <small>(remove)</small>
                       </a>
+
                       <span ng-if="currentPlaying.id == song.id"> - (current)</span>
                   </li>
               </ul>
+
+              <button play-all="songs">Play all</button>
+              <button play-all="songs" data-play="false">Add all</button>
+
           </div>
   <hr />
 
@@ -67,8 +72,7 @@
 
                 </div>
 
-                <button play-all="songs">Play all</button>
-                <button play-all="songs" data-play="false">Add all</button>
+
 
 
 

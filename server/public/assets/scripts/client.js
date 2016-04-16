@@ -29,13 +29,13 @@ myApp.config(["$routeProvider", function($routeProvider){
           templateUrl: "/assets/views/routes/playOneEpisode.html",
           controller: "SingleEpCtrl"
       })
-      .when("/episode", {
-          templateUrl: "/assets/views/routes/episode.html",
-          controller: "DummyController"
+      .when("/playlist_nightfall", {
+          templateUrl: "/assets/views/routes/playlist_nightfall.html",
+          controller: "NightfallCtrl"
       })
-      .when("/audio_sm2", {
-          templateUrl: "/assets/views/routes/audio_sm2.html",
-          controller: "MainCtrl"
+      .when("/playlist_vpoint", {
+          templateUrl: "/assets/views/routes/playlist_vpoint.html",
+          controller: "VpointCtrl"
       })
       .otherwise({
           redirectTo: "/home"
