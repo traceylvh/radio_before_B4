@@ -46,21 +46,23 @@ h2 {
   clear: both;
 }
 
+
 /* Dropdown Button ==============================================*/
 .dropbtn {
     /*background-color: #4CAF50;*/
     background-color: #02A388;
     color: white;
     padding: 16px;
-    font-size: 16px;
+    /*font-size: 16px;*/
     border: none;
+    border-radius: 50%;
     cursor: pointer;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
     /*background-color: #3e8e41;*/
-    background-color: #B2D3A6;
+    background-color: #00806A;
     outline: none;
 }
 
@@ -78,7 +80,7 @@ h2 {
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -95,6 +97,11 @@ h2 {
 /*playlist sub menu items move right */
 .move-right {
   text-align: right;
+}
+
+/*playlist indent for menu */
+.indent {
+  padding-left: 1.5em;
 }
 
 /* Change color of dropdown links on hover */
@@ -127,22 +134,24 @@ li {
 
 /* round button */
 .round-button {
-    display:block;
-    width:20px;
-    height:20px;
-    line-height: 15px;
-    border: 2px solid #f5f5f5;
+    /*display:block;*/
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    /*border: 2px solid #02A388;*/
+    border: 0;
     border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
+    color:#fff;
+    /*text-align:center;*/
     text-decoration:none;
-    background: #464646;
-    box-shadow: 0 0 3px gray;
-    font-size:15;
+    background-color: #02A388;
+    /*box-shadow: 0 0 3px #ccc;*/
+    font-size: 1.8em;
     /*font-weight:bold;*/
+    margin-bottom: 5px;
 }
 .round-button:hover {
-    background: #fff;
+    background: #00806A;
 }
 
 /* accordian =====================================================*/

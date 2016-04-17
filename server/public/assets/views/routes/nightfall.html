@@ -1,5 +1,5 @@
 <div>
-  <h1>Nightfall</h1>
+  <h1>Nightfall <i class="fa fa-moon-o fa-fw" aria-hidden="true"></i></h1>
     <div ng-repeat="item in nightfallArray | orderBy: 'title' ">
       <div  class="show-container">
         <h2>
@@ -11,8 +11,8 @@
             {{ item.artist }}
         </p>
 
-  <button ng-click="saveFavorite(item)">favorite</button>
-  <button ng-click="openEpisode(item)">play</button>
+  <button ng-click="saveFavorite(item)" class="round-button fa fa-star"></button>
+  <button ng-click="openEpisode(item)" class="round-button fa fa-play"></button>
 
       </div>
 
