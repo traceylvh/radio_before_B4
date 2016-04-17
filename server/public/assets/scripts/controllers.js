@@ -1,7 +1,7 @@
 myApp.controller('NightfallCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
     var heroService = HeroService;
 
-    //get data from Nightfall
+    //get data from nightfall.json
     heroService.getNightfall();
     $scope.songs = heroService.nightfallData;
 
@@ -10,7 +10,7 @@ myApp.controller('NightfallCtrl', ['$scope', 'HeroService', function ($scope, He
 myApp.controller('VpointCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
     var heroService = HeroService;
 
-    //get data from Nightfall
+    //get data from vpoint.json
     heroService.getVpoint();
     $scope.songs = heroService.vpointData;
 
