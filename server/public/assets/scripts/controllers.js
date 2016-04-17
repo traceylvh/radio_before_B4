@@ -79,6 +79,11 @@ function($scope, HeroService, $http, $location, $route, $window){
   // $scope.episodePick = heroService.playEpisode;
   $scope.episode = heroService.playEpisode;
 
+  $scope.myVar = false;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    };
+
 
 
 //updated save fav

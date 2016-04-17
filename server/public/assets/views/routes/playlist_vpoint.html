@@ -1,5 +1,6 @@
 
     <div >
+      <h1>V Point Playlist <i class="fa fa-rocket fa-fw" aria-hidden="true"></i></h1>
 
       <div class="player">
 
@@ -43,7 +44,7 @@
               <button clear-playlist>Clear Playlist</button>
               <br/>
               <br/>
-              <h5>Playlist</h5>
+              <h2>Playlist</h2>
               <ul>
                   <li ng-repeat="song in playlist">
                       <a play-from-playlist="song">{{ song.title }}</a>
@@ -62,13 +63,13 @@
           </div>
   <hr />
 
-                <h2>Songs</h2>
+                <h2>Add Episodes to Playlist</h2>
                 <div ng-repeat="song in songs">
                       <h3>{{ song.title }} </h3>
                       <p>{{ song.artist }} </p>
 
-                        <button music-player add-song="song" class="round-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        <button music-player="play" add-song="song"><i class="fa fa-play"></i></button>
+                      <button music-player add-song="song" class="round-button fa fa-plus"></button>
+                      <button music-player="play" add-song="song" class="round-button fa fa-play"></button>
 
                 </div>
 

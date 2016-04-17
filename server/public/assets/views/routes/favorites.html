@@ -1,18 +1,18 @@
 <h1>Favorites</h1>
-<div ng-repeat="item in favoritesArray.allFavorites | orderBy: 'title' ">
+<div ng-repeat="item in favoritesArray.allFavorites">
   <ul class="accordion" simple-accordion>
-                 <li>
-    <h2>
-      {{ item.title }}
-    </h2>
+    <li>
+      <h2>
+        {{ item.title }}
+      </h2>
 
-    <p>
-      {{ item.artist }}
-      <button ng-click="deleteData(item._id)">Remove</button>
-    </p>
+      <p>
+        {{ item.artist }}
+        <button ng-click="deleteData(item._id)">Remove</button>
+      </p>
 
 
-  </li>
+    </li>
 
   </ul>
 

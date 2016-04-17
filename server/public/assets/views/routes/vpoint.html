@@ -1,16 +1,21 @@
 <h1>Vanishing Point <i class="fa fa-rocket fa-fw" aria-hidden="true"></i></h1>
   <div ng-repeat="item in vpointArray | orderBy: 'title' ">
-    <div >
-      <h4>
+    <div class="show-container">
+      <h2>
           {{ item.title }}
-      </h4>
+      </h2>
 
       <p>
           {{ item.artist }}
       </p>
 
-<button ng-click="saveFavorite(item)">favorite</button>
-<button ng-click="openEpisode(item)">play</button>
+      <p ng-show="myVar">
+      Added to favorites!
+      <button ng-click="toggle()">x</button>
+      </p>
+
+<button ng-click="saveFavorite(item); toggle()" class="round-button fa fa-star"></button>
+<button ng-click="openEpisode(item)" class="round-button fa fa-play"></button>
 
     </div>
 
