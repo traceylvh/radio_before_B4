@@ -11,8 +11,13 @@
             {{ item.artist }}
         </p>
 
-  <button ng-click="saveFavorite(item)" class="round-button fa fa-star"></button>
-  <button ng-click="openEpisode(item)" class="round-button fa fa-play"></button>
+        <p ng-show="myVar">
+        Added to favorites!
+        <button ng-click="toggle()">x</button>
+        </p>
+
+        <button ng-click="saveFavorite(item); toggle()" class="round-button fa fa-star"></button>
+        <button ng-click="openEpisode(item)" class="round-button fa fa-play-circle"></button>
 
       </div>
 

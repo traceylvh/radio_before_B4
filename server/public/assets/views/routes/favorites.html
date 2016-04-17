@@ -1,44 +1,24 @@
-<h1>Favorites</h1>
+<h1>Favorites  <i class="fa fa-star fa-fw" aria-hidden="true"></i></h1>
 <div ng-repeat="item in favoritesArray.allFavorites">
-  <ul class="accordion" simple-accordion>
-    <li>
+  <!-- get rid of show-container div if using accordion -->
+  <div  class="show-container">
+  <!-- <ul class="accordion" simple-accordion>
+    <li> -->
       <h2>
         {{ item.title }}
       </h2>
 
       <p>
         {{ item.artist }}
-        <button ng-click="deleteData(item._id)">Remove</button>
+        <!-- put buttons here if using accordion -->
       </p>
 
+      <button ng-click="deleteData(item._id)" class="round-button fa fa-minus-circle"></button>
+      <button ng-click="openEpisode(item)" class="round-button fa fa-play-circle"></button>
 
-    </li>
 
-  </ul>
+    <!-- </li>
 
+  </ul> -->
 </div>
-
-<!-- <ul class="accordion" simple-accordion>
-               <li>
-                   <h2>Title test one</h2>
-                   <p>
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu tempor ante, eget ornare magna. Pellentesque cursus cursus erat sodales placerat. Fusce imperdiet auctor tortor at imperdiet. Integer feugiat, purus et pellentesque maximus, purus tortor dictum sem, et pellentesque turpis purus non massa. Donec et tellus nec enim luctus accumsan eget vel diam. Sed vel scelerisque mauris. Etiam porta augue vitae dolor pulvinar, eget faucibus diam posuere. Donec sit amet lobortis quam, at mattis ex. Ut vel suscipit arcu. Aliquam nec sem nec lorem dictum hendrerit. Duis rutrum sit amet magna quis fringilla. Praesent ut sem iaculis, semper turpis ultricies, porta massa. Curabitur id tellus vitae quam ornare tristique sit amet eget sapien. Phasellus imperdiet pretium pharetra. Vestibulum gravida sem id est sagittis placerat. Duis dolor sem, aliquet in velit quis, placerat commodo sapien.
-                   </p>
-               </li> -->
-
-
-               <!-- <div ng-repeat="item in favoritesArray.allFavorites | orderBy: 'title' ">
-                 <div >
-                   <h4>
-                     {{ item.title }}
-                   </h4>
-
-                   <p>
-                     {{ item.artist }}
-                   </p>
-
-                   <button ng-click="deleteData(item._id)">Remove</button>
-
-                 </div>
-
-               </div> -->
+</div>

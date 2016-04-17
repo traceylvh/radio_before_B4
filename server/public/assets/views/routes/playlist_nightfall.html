@@ -1,83 +1,83 @@
 
-    <div >
-      <h1>Nightfall Playlist <i class="fa fa-moon-o fa-fw" aria-hidden="true"></i></h1>
+<div >
+  <h1>Nightfall Playlist <i class="fa fa-moon-o fa-fw" aria-hidden="true"></i></h1>
 
-      <div class="player">
+  <div class="player">
 
-              <!-- init soundManager2 player -->
-              <sound-manager></sound-manager>
+    <!-- init soundManager2 player -->
+    <sound-manager></sound-manager>
 
-              <p>
-                  Currently Playing: {{ currentPlaying.title }}
-                  <!-- by {{ currentPlaying.artist }}  -->
-                  ({{ currentPostion }} / {{ currentDuration }})
-              </p>
+    <p>
+      Currently Playing: {{ currentPlaying.title }}
+      <!-- by {{ currentPlaying.artist }}  -->
+      ({{ currentPostion }} / {{ currentDuration }})
+    </p>
 
-              <div class="seekBase" seek-track>
-                  <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
-              </div>
-              <br />
-              <button play-music class="fa fa-play"></button>
-              -
-              <button pause-music class="fa fa-pause"></button>
-              -
-              <button stop-music class="fa fa-stop"></button>
-              -
-              <button repeat-music class="fa fa-repeat"> ({{ repeat }})</button>
-              -
-              <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button>
+    <div class="seekBase" seek-track>
+      <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+    </div>
+    <br />
+    <button play-music class="fa fa-play"></button>
+    -
+    <button pause-music class="fa fa-pause"></button>
+    -
+    <button stop-music class="fa fa-stop"></button>
+    -
+    <button repeat-music class="fa fa-repeat"> ({{ repeat }})</button>
+    -
+    <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button>
 
-              Is Playing: {{ isPlaying }}
-              <br/>
-              <br/>Volume: {{ volume }} -
-              <button music-volume data-type="increase">+</button>
-              -
-              <button music-volume data-type="decrease">-</button>
-              -
-              <button mute-music>Mute ({{ mute }})</button>
-              <br/>
-              <br/>
-              <button prev-track>Prev Track</button>
-              -
-              <button next-track>Next Track</button>
-              -
-              <button clear-playlist>Clear Playlist</button>
-              <br/>
-              <br/>
-              <h2>Playlist</h2>
-              <ul>
-                  <li ng-repeat="song in playlist">
-                      <a play-from-playlist="song">{{ song.title }}</a>
-                      -
-                      <a remove-from-playlist="song" data-index="{{$index}}">
-                          <small>(remove)</small>
-                      </a>
+    Is Playing: {{ isPlaying }}
+    <br/>
+    <br/>Volume: {{ volume }} -
+    <button music-volume data-type="increase">+</button>
+    -
+    <button music-volume data-type="decrease">-</button>
+    -
+    <button mute-music>Mute ({{ mute }})</button>
+    <br/>
+    <br/>
+    <button prev-track>Prev Track</button>
+    -
+    <button next-track>Next Track</button>
+    -
+    <button clear-playlist>Clear Playlist</button>
+    <br/>
+    <br/>
+    <h2>Playlist</h2>
+    <ul>
+      <li ng-repeat="song in playlist">
+        <a play-from-playlist="song">{{ song.title }}</a>
+        -
+        <a remove-from-playlist="song" data-index="{{$index}}">
+          <small>(remove)</small>
+        </a>
 
-                      <span ng-if="currentPlaying.id == song.id"> - (current)</span>
-                  </li>
-              </ul>
+        <span ng-if="currentPlaying.id == song.id"> - (current)</span>
+      </li>
+    </ul>
 
-              <button play-all="songs">Play all</button>
-              <button play-all="songs" data-play="false">Add all</button>
+    <button play-all="songs">Play all</button>
+    <button play-all="songs" data-play="false">Add all</button>
 
-          </div>
+  </div>
   <hr />
 
-                <h2>Add Episodes to Playlist</h2>
-                <div ng-repeat="song in songs"   class="show-container">
-                      <h3>{{ song.title }} </h3>
-                      <p>{{ song.artist }} </p>
+  <h2>Add Episodes to Playlist</h2>
+  <div ng-repeat="song in songs"   class="show-container">
+    <h3>{{ song.title }} </h3>
+    <p>{{ song.artist }} </p>
 
-                        <button music-player add-song="song" class="round-button fa fa-plus"></button>
-                        <button music-player="play" add-song="song" class="round-button fa fa-play"></button>
+    <button music-player add-song="song" class="round-button fa fa-plus-circle"></button>
+    <button music-player="play" add-song="song" class="round-button fa fa-play-circle"></button>
 
-                </div>
-
-
+  </div>
 
 
 
 
 
 
-        </div>
+
+
+</div>

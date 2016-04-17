@@ -76,7 +76,6 @@ function($scope, HeroService, $http, $location, $route, $window){
 
 
   $scope.openEpisode = heroService.openEpisode;
-  // $scope.episodePick = heroService.playEpisode;
   $scope.episode = heroService.playEpisode;
 
   $scope.myVar = false;

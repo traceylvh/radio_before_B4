@@ -44,7 +44,7 @@ p {
   /*height: 1000px;*/
   margin: auto;
   background-color: #fff;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .show-container {
@@ -54,18 +54,22 @@ p {
 
 
 .footer {
-    background: #fff;
+    background: #02A388;
     border-top: 1px solid #ccc;
     position: fixed;
     text-align: center;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 50px;
+    height: 60px;
 }
 
 .clear {
   clear: both;
+}
+
+.small-type {
+  font-size: .6em;
 }
 
 
@@ -75,7 +79,7 @@ p {
     background-color: #02A388;
     color: white;
     padding: 16px;
-    /*font-size: 16px;*/
+    font-size: 2em;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -155,27 +159,57 @@ li {
 }
 /* end soundmanager css ==================================================*/
 
-/* round button */
+/* round button soft orange */
 .round-button {
-    /*display:block;*/
-    width: 1.4em;
-    height: 1.4em;
-    font-size: 1.4em;
-    line-height: 1.4em;
-    /*border: 2px solid #02A388;*/
+    /*font-size: .7em;*/
+    padding: 5px;
     border: 0;
     border-radius: 50%;
     color:#fff;
-    /*text-align:center;*/
+    text-align:center;
     text-decoration:none;
-    background-color: #02A388;
-    /*box-shadow: 0 0 3px #ccc;*/
-
-    /*font-weight:bold;*/
+    background-color: #FC9A33;
     margin-bottom: 5px;
 }
-.round-button:hover {
-    background: #00806A;
+.round-button:hover, .round-button:focus {
+    background: #FB4C1A;
+    outline: none;
+}
+
+/* player button - appears on player pages */
+.player-button {
+    /*font-size: .7em;*/
+    /*padding: 3px;*/
+    /*border: 2px solid #ccc;*/
+    border: 0;
+    border-radius: 50%;
+    color:#505050;
+    text-align:center;
+    text-decoration:none;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.player-button:hover, .player-button:focus {
+    background: #E8E8E8;
+    outline: none;
+}
+
+/* footer buttons */
+.footer-button {
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    color:#222;
+    text-align:center;
+    text-decoration:none;
+    background-color: #fff;
+    margin: 10px;
+}
+.footer-button:hover, .footer-button:focus {
+    background: #E8E8E8;
+    outline: none;
 }
 
 /* accordian =====================================================*/

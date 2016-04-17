@@ -5,35 +5,24 @@
 
   <h1>Play Episode</h1>
   <div ng-repeat="song in songs">
-    <h2>{{ song.title }} </h2>
-    <p>{{ song.artist }} </p>
-
     <div class="player">
 
       <!-- init soundManager2 player -->
       <sound-manager></sound-manager>
 
-<!-- TODO-tv the play button starts over after pause. Think of a way to fix this - switch out button? -->
+      <!-- TODO-tv the play button starts over after pause. Think of a way to fix this - switch out button? -->
+        <button music-player="play" add-song="song" class="player-button fa fa-play-circle fa-3x"></button>
+        <button stop-music class="player-button fa fa-stop-circle fa-2x"></button>
 
-      <div class="seekBase" seek-track>
-        <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+
+        <div class="seekBase" seek-track>
+          <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+        </div>
+        <span class="small-type">({{ currentPostion }} / {{ currentDuration }})</span>
+
+        <h2>{{ song.title }} </h2>
+        <p>{{ song.artist }} </p>
+
       </div>
-      <br />
-      <button music-player="play" add-song="song"><i class="fa fa-play"></i></button>
-      <!-- <button play-music><i class="fa fa-play"></i></button> -->
-      -
-      <!-- <button pause-music><i class="fa fa-pause"></i></button>
-      - -->
-      <button stop-music><i class="fa fa-stop" aria-hidden="true"></i></button>
-      -
-      ({{ currentPostion }} / {{ currentDuration }})
-
-
     </div>
-
-
-
   </div>
-
-
-</div>
