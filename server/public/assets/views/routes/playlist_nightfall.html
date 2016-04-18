@@ -7,63 +7,58 @@
     <!-- init soundManager2 player -->
     <sound-manager></sound-manager>
 
-    <p>
-      Currently Playing: {{ currentPlaying.title }}
-      <!-- by {{ currentPlaying.artist }}  -->
-      ({{ currentPostion }} / {{ currentDuration }})
-    </p>
+
+
+    <button play-music class="player-button fa fa-play-circle fa-3x"></button>
+    <button pause-music class="player-button fa fa-pause-circle fa-2x"></button>
+    <button stop-music class="player-button fa fa-stop-circle fa-2x"></button>
+    <button prev-track class="player-button fa fa-step-backward"></button>
+    <button next-track class="player-button fa fa-step-forward"></button>
+
 
     <div class="seekBase" seek-track>
       <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
     </div>
-    <br />
-    <button play-music class="fa fa-play"></button>
-    -
-    <button pause-music class="fa fa-pause"></button>
-    -
-    <button stop-music class="fa fa-stop"></button>
-    -
-    <button repeat-music class="fa fa-repeat"> ({{ repeat }})</button>
-    -
-    <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button>
 
+    <span class="small-type">({{ currentPostion }} / {{ currentDuration }})</span>
+    <span class="small-type">Volume: {{ volume }}</span>
+    <button music-volume data-type="increase" class="player-button fa fa-volume-up"></button>
+    <button music-volume data-type="decrease" class="player-button fa fa-volume-down"></button>
+    <!-- <button mute-music class="player-button fa fa-volume-off"></button> -->
+    <!-- <button mute-music>Mute ({{ mute }})</button> -->
+    <!--
+    <button repeat-music class="fa fa-repeat"> ({{ repeat }})</button>
+    <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button>
     Is Playing: {{ isPlaying }}
-    <br/>
-    <br/>Volume: {{ volume }} -
-    <button music-volume data-type="increase">+</button>
-    -
-    <button music-volume data-type="decrease">-</button>
-    -
-    <button mute-music>Mute ({{ mute }})</button>
-    <br/>
-    <br/>
-    <button prev-track>Prev Track</button>
-    -
-    <button next-track>Next Track</button>
-    -
-    <button clear-playlist>Clear Playlist</button>
-    <br/>
-    <br/>
+    <br/> -->
+
+    <p>
+      <span class="small-type">Currently Playing</span> <br />
+      <strong>{{ currentPlaying.title }}</strong>
+
+    </p>
+
+
+
     <h2>Playlist</h2>
     <ul>
       <li ng-repeat="song in playlist">
         <a play-from-playlist="song">{{ song.title }}</a>
-        -
-        <a remove-from-playlist="song" data-index="{{$index}}">
-          <small>(remove)</small>
-        </a>
 
-        <span ng-if="currentPlaying.id == song.id"> - (current)</span>
+        <span ng-if="currentPlaying.id == song.id" class="small-type"> (current)</span>
+        <a remove-from-playlist="song" data-index="{{$index}}">
+          <span class="small-type">(remove)</span>
+        </a>
       </li>
     </ul>
 
-    <button play-all="songs">Play all</button>
-    <button play-all="songs" data-play="false">Add all</button>
+    <button class="pill-button" play-all="songs">Play All</button>
+    <button class="pill-button" play-all="songs" data-play="false">Add All</button>
+    <button class="pill-button" clear-playlist>Clear</button>
 
   </div>
-  <hr />
 
-  <h2>Add Episodes to Playlist</h2>
+  <h2 class="aqua-box">Add Episodes to Playlist</h2>
   <div ng-repeat="song in songs"   class="show-container">
     <h3>{{ song.title }} </h3>
     <p>{{ song.artist }} </p>
@@ -72,12 +67,5 @@
     <button music-player="play" add-song="song" class="round-button fa fa-play-circle"></button>
 
   </div>
-
-
-
-
-
-
-
 
 </div>

@@ -35,6 +35,12 @@ p {
   font-size: .9em;
 }
 
+.aqua-box {
+  background-color: #02A388;
+  color: #fff;
+  padding: 5px 5px 5px 10px;
+}
+
 .home-style img {
   margin-top: 40px;
 }
@@ -156,6 +162,7 @@ when the user clicks on the dropdown button) */
 
 li {
 	cursor: pointer;
+  font-size: .9em;
 }
 /* end soundmanager css ==================================================*/
 
@@ -172,6 +179,24 @@ li {
     margin-bottom: 5px;
 }
 .round-button:hover, .round-button:focus {
+    background: #FB4C1A;
+    outline: none;
+}
+
+/* pill button soft orange */
+.pill-button {
+    font-size: .7em;
+    font-weight: bold;
+    padding: 5px;
+    border: 0;
+    border-radius: 10%;
+    color:#fff;
+    text-align:center;
+    text-decoration:none;
+    background-color: #FC9A33;
+    margin-bottom: 5px;
+}
+.pill-button:hover, .pill-button:focus {
     background: #FB4C1A;
     outline: none;
 }
@@ -213,7 +238,7 @@ li {
 }
 
 /* accordian =====================================================*/
-.accordion {
+/*.accordion {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -253,6 +278,6 @@ li {
 
     .accordion .item.open .content {
         height: auto;
-    }
+    }*/
 
 /* accordian end ======================================*/
