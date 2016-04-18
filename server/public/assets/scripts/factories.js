@@ -37,7 +37,6 @@ myApp.factory("HeroService", ["$http", "$location", function($http, $location){
           // return nightfallData;
           // console.log("return nightfallData", nightfallData);
         }
-
       });
     };
 

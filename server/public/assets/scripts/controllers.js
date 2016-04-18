@@ -65,11 +65,7 @@ function($scope, HeroService, $http, $location, $route, $window){
 
 
   heroService.getNightfall();
-  //data for nightfall page
   $scope.nightfallArray = heroService.nightfallData;
-
-
-
 
   heroService.getVpoint();
   $scope.vpointArray = heroService.vpointData;

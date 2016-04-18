@@ -58,7 +58,7 @@
   </div>
 
   <h2 class="aqua-box">Add Episodes to Playlist</h2>
-  <div ng-repeat="song in songs"   class="show-container">
+  <div ng-repeat="song in songs | orderBy: 'title' "   class="show-container">
     <h3>{{ song.title }} </h3>
     <p>{{ song.artist }} </p>
 
