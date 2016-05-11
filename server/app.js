@@ -42,7 +42,8 @@ app.use(passport.session());
 //  process.env.MONGOLAB_URI ||
 //  process.env.MONGOHQ_URL ||
 
-var mongoURI = 'mongodb://localhost/radio_before';
+var mongoURI = 'mongodb://localhost/radio_before' ||
+'mongodb://traceylvh:Phin6us!@ds025180.mlab.com:25180/radio_before';
 
 // var mongoURI = "ds025180.mlab.com:25180/radio_before";
 var MongoDB = mongoose.connect(mongoURI).connection;
