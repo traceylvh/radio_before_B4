@@ -1,4 +1,30 @@
-myApp.controller('NightfallCtrl', ['$scope', function ($scope) {
+myApp.controller('NightfallCtrl', ['$scope', 'EpService', '$http', function ($scope, EpService, $http) {
+
+  var epService = EpService;
+
+  $scope.openEpisode = epService.openEpisode;
+  $scope.episode = epService.playEpisode;
+
+  $scope.myVar = false;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    };
+
+//updated save fav
+var favObject = {};
+
+$scope.saveFavorite = function(data){
+    epService.postFavData(data);
+}
+
+epService.getFavData();
+
+$scope.favoritesArray = epService.favoritesData;
+
+//delete favorite
+$scope.deleteData = epService.deleteData;
+
+
         $scope.songs = [
           {
             "url": "https://ia802707.us.archive.org/35/items/Nightfall-cbcRadioProgram-episodesMp3Format/Nightfall_CBC_80-10-10_15_Special_Services.mp3",
