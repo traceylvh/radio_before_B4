@@ -1,27 +1,27 @@
-myApp.controller('NightfallCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
-    var heroService = HeroService;
+// myApp.controller('NightfallCtrl', ['$scope', 'NightfallFactory', function ($scope, NightfallFactory) {
+//     var nightfallFactory = NightfallFactory;
+//
+//     //get data from nightfall.json
+//     nightfallFactory.getNightfall();
+//     $scope.songs = nightfallFactory.nightfallData;
+//
+// }]);
 
-    //get data from nightfall.json
-    heroService.getNightfall();
-    $scope.songs = heroService.nightfallData;
-
-}]);
-
-myApp.controller('VpointCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
-    var heroService = HeroService;
+myApp.controller('VpointCtrl', ['$scope', 'EpService', function ($scope, EpService) {
+    var epService = EpService;
 
     //get data from vpoint.json
-    heroService.getVpoint();
-    $scope.songs = heroService.vpointData;
+    epService.getVpoint();
+    $scope.songs = epService.vpointData;
 
 }]);
 
-myApp.controller('SingleEpCtrl', ['$scope', 'HeroService', function ($scope, HeroService) {
-    var heroService = HeroService;
+myApp.controller('SingleEpCtrl', ['$scope', 'EpService', function ($scope, EpService) {
+    var epService = EpService;
 
 
-    $scope.openEpisode = heroService.openEpisode;
-    $scope.songs = heroService.playEpisode;
+    $scope.openEpisode = epService.openEpisode;
+    $scope.songs = epService.playEpisode;
 }]);
 
 
@@ -38,41 +38,22 @@ myApp.controller("DummyController", ["$scope", "SweetFactory", function($scope, 
 // }]);
 
 
-myApp.controller("EpisodeController", ["$scope", "HeroService", "$http",
-"$location", "$route", "$window",
-function($scope, HeroService, $http, $location, $route, $window){
+myApp.controller("EpisodeController", ["$scope", "EpService", "$http",
+function($scope, EpService, $http){
 
-  // $scope.reloadPage=$route.reload();
-  // $route.reload();
-
-  // var currentPageTemplate = $route.current.templateUrl;
-  // $templateCache.remove(currentPageTemplate);
-  // $route.reload();
-
-// $scope.reloadRoute = function () {
-// $route.reload();
-// };
-
-//this causes window to keep reloading... ============================== for friday
-// $scope.reloadWindow = function () {
-// $window.location.reload();
-// };
-
-// $scope.reloadWindow();
-//=============================================================
-  var heroService = HeroService;
+  var epService = EpService;
   // $scope.epName = "";
 
 
-  heroService.getNightfall();
-  $scope.nightfallArray = heroService.nightfallData;
+  epService.getNightfall();
+  $scope.nightfallArray = epService.nightfallData;
 
-  heroService.getVpoint();
-  $scope.vpointArray = heroService.vpointData;
+  epService.getVpoint();
+  $scope.vpointArray = epService.vpointData;
 
 
-  $scope.openEpisode = heroService.openEpisode;
-  $scope.episode = heroService.playEpisode;
+  $scope.openEpisode = epService.openEpisode;
+  $scope.episode = epService.playEpisode;
 
   $scope.myVar = false;
     $scope.toggle = function() {
@@ -85,15 +66,15 @@ function($scope, HeroService, $http, $location, $route, $window){
 var favObject = {};
 
 $scope.saveFavorite = function(data){
-    heroService.postFavData(data);
+    epService.postFavData(data);
 }
 
-heroService.getFavData();
+epService.getFavData();
 
-$scope.favoritesArray = heroService.favoritesData;
+$scope.favoritesArray = epService.favoritesData;
 
 //delete favorite
-$scope.deleteData = heroService.deleteData;
+$scope.deleteData = epService.deleteData;
 
 
 
@@ -101,21 +82,21 @@ $scope.deleteData = heroService.deleteData;
 
 
 
-myApp.controller("AddController", ["$scope", "HeroService", function($scope, HeroService){
+myApp.controller("AddController", ["$scope", "EpService", function($scope, EpService){
     var heroObject = {};
-    var heroService = HeroService;
+    var epService = EpService;
 
     $scope.saveHero = function(data){
-        heroService.postData(data);
+        epService.postData(data);
         $scope.heroObject = {};
     }
 }]);
 
 
-myApp.controller("ShowController", ["$scope", "HeroService", function($scope, HeroService){
-    var heroService = HeroService;
+myApp.controller("ShowController", ["$scope", "EpService", function($scope, EpService){
+    var epService = EpService;
 
-    heroService.getData();
-    $scope.heroArray = heroService.heroData;
-    $scope.deleteData = heroService.deleteData;
+    epService.getData();
+    $scope.heroArray = epService.heroData;
+    $scope.deleteData = epService.deleteData;
 }]);

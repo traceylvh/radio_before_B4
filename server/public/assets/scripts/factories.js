@@ -1,4 +1,33 @@
-myApp.factory("HeroService", ["$http", "$location", function($http, $location){
+myApp.factory("NightfallFactory", ["$http", "$location", function($http, $location){
+    var nightfallData = [];
+
+    var getNightfall = function() {
+      $http.get('/nightfall').then(function(response){
+        // console.log(response);
+        // nightfallData = [];
+        // console.log("nightfallData", nightfallData);
+        for (var i = 0; i < response.data.length; i++) {
+          var song = response.data[i];
+          nightfallData.push(song);
+          // console.log("nightfallData after push", nightfallData);
+          // return nightfallData;
+          // console.log("return nightfallData", nightfallData);
+        }
+      });
+    };
+
+    return {
+
+      getNightfall: getNightfall,
+      nightfallData: nightfallData,
+
+    };
+}]);
+
+
+// -------------------
+
+myApp.factory("EpService", ["$http", "$location", function($http, $location){
     var heroData = {};
     var favoritesData = {};
     var nightfallData = [];
