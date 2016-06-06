@@ -7,18 +7,17 @@
 //
 // }]);
 
-myApp.controller('VpointCtrl', ['$scope', 'EpService', function ($scope, EpService) {
-    var epService = EpService;
-
-    //get data from vpoint.json
-    epService.getVpoint();
-    $scope.songs = epService.vpointData;
-
-}]);
+// myApp.controller('VpointCtrl', ['$scope', 'EpService', function ($scope, EpService) {
+//     var epService = EpService;
+//
+//     //get data from vpoint.json
+//     epService.getVpoint();
+//     $scope.songs = epService.vpointData;
+//
+// }]);
 
 myApp.controller('SingleEpCtrl', ['$scope', 'EpService', function ($scope, EpService) {
     var epService = EpService;
-
 
     $scope.openEpisode = epService.openEpisode;
     $scope.songs = epService.playEpisode;
@@ -45,11 +44,11 @@ function($scope, EpService, $http){
   // $scope.epName = "";
 
 
-  epService.getNightfall();
-  $scope.nightfallArray = epService.nightfallData;
-
-  epService.getVpoint();
-  $scope.vpointArray = epService.vpointData;
+  // epService.getNightfall();
+  // $scope.nightfallArray = epService.nightfallData;
+  //
+  // epService.getVpoint();
+  // $scope.vpointArray = epService.vpointData;
 
 
   $scope.openEpisode = epService.openEpisode;

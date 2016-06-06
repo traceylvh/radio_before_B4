@@ -19,7 +19,7 @@ myApp.config(["$routeProvider", function($routeProvider){
       })
       .when("/vpoint", {
           templateUrl: "/assets/views/routes/vpoint.html",
-          controller: "EpisodeController"
+          controller: "VpointCtrl"
       })
       .when("/favorites", {
           templateUrl: "/assets/views/routes/favorites.html",
