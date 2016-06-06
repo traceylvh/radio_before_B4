@@ -15,7 +15,7 @@ var favObject = {};
 
 $scope.saveFavorite = function(data){
     epService.postFavData(data);
-}
+};
 
 epService.getFavData();
 
