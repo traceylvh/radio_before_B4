@@ -27,6 +27,22 @@ $scope.deleteData = epService.deleteData;
 
         $scope.songs = [
           {
+          "url": "https://ia800300.us.archive.org/29/items/VPoint/VP_850419_28_Ground_Zero.mp3",
+          "id": "1",
+          "source": "original",
+          "format": "32Kbps MP3",
+          "title": "GroundZero",
+          "md5": "bf10fbc1d67f859ee3c29710ef484cc5",
+          "mtime": "1246209905",
+          "size": "7176986",
+          "crc32": "d7bd7549",
+          "sha1": "3219aa32851ee46111844a8f7ebe9ceb4c280c6a",
+          "length": "1794.24",
+          "height": "0",
+          "width": "0",
+          "artist": "No description available."
+          },
+          {
           "url": "https://ia800300.us.archive.org/29/items/VPoint/VP_841102_05_Cage_of_Light.mp3",
           "id": "2",
           "format": "32Kbps MP3",

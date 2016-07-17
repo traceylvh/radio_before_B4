@@ -2,17 +2,17 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 var path = require("path");
-var nightfall = require("../public/assets/shows/nightfall.json");
+// var nightfall = require("../public/assets/shows/nightfall.json");
 var vpoint = require("../public/assets/shows/vpoint.json");
 
 
 //get nightfall data from json file
-router.get('/nightfall', function(req, res) {
-  // console.log(nightfall.files);
-  var nightfallArray = nightfall.files;
-
-    res.send(nightfallArray);
-});
+// router.get('/nightfall', function(req, res) {
+//   // console.log(nightfall.files);
+//   var nightfallArray = nightfall.files;
+//
+//     res.send(nightfallArray);
+// });
 
 //get vpoint data from json file
 router.get('/vpoint', function(req, res) {
