@@ -1,0 +1,259 @@
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 90%; } }
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 100%; } }
+@media only screen and (max-width: 1100px) {
+  body {
+    font-size: 120%; } }
+body {
+  background-color: #fff;
+  font-family: sans-serif; }
+
+h1 {
+  font-family: 'Contrail One';
+  border-bottom: 6px solid #FC9A33;
+  font-size: 1.8em; }
+
+h2 {
+  font-family: 'Contrail One';
+  font-size: 1.2em; }
+
+h3 {
+  font-family: 'Contrail One';
+  font-size: 1em; }
+
+p {
+  font-size: .9em; }
+
+.aqua-box {
+  background-color: #02A388;
+  color: #fff;
+  padding: 5px 5px 5px 10px; }
+
+.home-style {
+  width: 350px;
+  margin: auto; }
+
+.home-style img {
+  margin-top: 40px;
+  width: 350px; }
+
+.container {
+  width: 90%;
+  /*height: 1000px;*/
+  margin: auto;
+  background-color: #fff;
+  padding-bottom: 60px; }
+
+.show-container {
+  padding-bottom: 5px;
+  border-bottom: 2px dotted #9CAE42; }
+
+.footer {
+  background: #02A388;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px; }
+
+.clear {
+  clear: both; }
+
+.small-type {
+  font-size: .6em; }
+
+/* Dropdown Button ==============================================*/
+.dropbtn {
+  /*background-color: #4CAF50;*/
+  background-color: #02A388;
+  color: white;
+  padding: 16px;
+  font-size: 2em;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer; }
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  /*background-color: #3e8e41;*/
+  background-color: #00806A;
+  outline: none; }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 230px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-family: 'Contrail One';
+  font-size: .85em;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #ccc; }
+
+/*playlist sub menu items move right */
+.move-right {
+  text-align: right; }
+
+/*playlist indent for menu */
+.indent {
+  padding-left: 1.5em; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1; }
+
+/* Show the dropdown menu
+(use JS to add this class to the .dropdown-content container
+when the user clicks on the dropdown button) */
+.show {
+  display: block; }
+
+/* end dropdown button ==============================================*/
+/* soundmanager css ==================================================*/
+.seekBase {
+  height: 10px;
+  width: 90%;
+  border: 1px solid #cccccc; }
+
+.seekLoad {
+  height: 10px;
+  width: 0;
+  /*background-color: #E0EAF1;*/
+  background-color: #B2D3A6; }
+
+li {
+  cursor: pointer;
+  font-size: .9em; }
+
+/* end soundmanager css ==================================================*/
+/* round button soft orange */
+.round-button {
+  /*font-size: .7em;*/
+  padding: 5px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #FC9A33;
+  margin-bottom: 5px; }
+
+.round-button:hover, .round-button:focus {
+  background: #FB4C1A;
+  outline: none; }
+
+/* pill button soft orange */
+.pill-button {
+  font-size: .7em;
+  font-weight: bold;
+  padding: 5px;
+  border: 0;
+  border-radius: 10%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #FC9A33;
+  margin-bottom: 5px; }
+
+.pill-button:hover, .pill-button:focus {
+  background: #FB4C1A;
+  outline: none; }
+
+/* player button - appears on player pages */
+.player-button {
+  /*font-size: .7em;*/
+  /*padding: 3px;*/
+  /*border: 2px solid #ccc;*/
+  border: 0;
+  border-radius: 50%;
+  color: #505050;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  margin-bottom: 5px; }
+
+.player-button:hover, .player-button:focus {
+  background: #E8E8E8;
+  outline: none; }
+
+/* footer buttons */
+.footer-button {
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  color: #222;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  margin: 10px; }
+
+.footer-button:hover, .footer-button:focus {
+  background: #E8E8E8;
+  outline: none; }
+
+/* accordian =====================================================*/
+/*.accordion {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .accordion .item .title {
+        margin: 0;
+        padding: 10px;
+        background-color: #009688;
+        border-bottom: 3px solid #CDDC39;
+        color: #fff;
+        font-weight: 100;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .accordion .item .title:after {
+        content: '\f078';
+        font-family: 'FontAwesome';
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .accordion .item.open .title:after {
+        transform: rotate(180deg);
+    }
+
+    .accordion .item .content {
+        padding: 0;
+        margin: 0;
+        background-color: #CDDC39;
+        transition: all 0.5s ease;
+        overflow: hidden;
+    }
+
+    .accordion .item.open .content {
+        height: auto;
+    }*/
+/* accordian end ======================================*/
+
+/*# sourceMappingURL=style.css.map */
