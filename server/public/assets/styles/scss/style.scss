@@ -1,3 +1,5 @@
+@import "settings";
+
 @media only screen and (max-width: 400px) {
   body { font-size:90%;}
 }
@@ -16,18 +18,18 @@ body {
 }
 
 h1 {
-  font-family: 'Contrail One';
+  font-family: $mainFont;
   border-bottom: 6px solid #FC9A33;
   font-size: 1.8em;
 }
 
 h2 {
-  font-family: 'Contrail One';
+  font-family: $mainFont;
   font-size: 1.2em;
 }
 
 h3 {
-  font-family: 'Contrail One';
+  font-family: $mainFont;
   font-size: 1em;
 }
 
@@ -36,7 +38,7 @@ p {
 }
 
 .aqua-box {
-  background-color: #02A388;
+  background-color: $mainColor;
   color: #fff;
   padding: 5px 5px 5px 10px;
 }
@@ -66,7 +68,7 @@ p {
 
 
 .footer {
-    background: #02A388;
+    background: $mainColor;
     border-top: 1px solid #ccc;
     position: fixed;
     text-align: center;
@@ -88,20 +90,18 @@ p {
 /* Dropdown Button ==============================================*/
 .dropbtn {
     /*background-color: #4CAF50;*/
-    background-color: #02A388;
+    background-color: $mainColor;
     color: white;
     padding: 16px;
     font-size: 2em;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    /*background-color: #3e8e41;*/
-    background-color: #00806A;
-    outline: none;
+    &:hover, &:focus {
+        /*background-color: #3e8e41;*/
+        background-color: #00806A;
+        outline: none;
+    }
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -124,7 +124,7 @@ p {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    font-family: 'Contrail One';
+    font-family: $mainFont;
     font-size: .85em;
     color: black;
     padding: 8px 16px;
@@ -183,11 +183,15 @@ li {
     text-decoration:none;
     background-color: #FC9A33;
     margin-bottom: 5px;
+    &:hover, &:focus {
+        background: #FB4C1A;
+        outline: none;
+    }
 }
-.round-button:hover, .round-button:focus {
-    background: #FB4C1A;
-    outline: none;
-}
+// .round-button:hover, .round-button:focus {
+//     background: #FB4C1A;
+//     outline: none;
+// }
 
 /* pill button soft orange */
 .pill-button {

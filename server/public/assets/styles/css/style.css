@@ -1,3 +1,4 @@
+/* colors */
 @media only screen and (max-width: 400px) {
   body {
     font-size: 90%; } }
@@ -12,16 +13,16 @@ body {
   font-family: sans-serif; }
 
 h1 {
-  font-family: 'Contrail One';
+  font-family: "Contrail One";
   border-bottom: 6px solid #FC9A33;
   font-size: 1.8em; }
 
 h2 {
-  font-family: 'Contrail One';
+  font-family: "Contrail One";
   font-size: 1.2em; }
 
 h3 {
-  font-family: 'Contrail One';
+  font-family: "Contrail One";
   font-size: 1em; }
 
 p {
@@ -77,12 +78,10 @@ p {
   border: none;
   border-radius: 50%;
   cursor: pointer; }
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  /*background-color: #3e8e41;*/
-  background-color: #00806A;
-  outline: none; }
+  .dropbtn:hover, .dropbtn:focus {
+    /*background-color: #3e8e41;*/
+    background-color: #00806A;
+    outline: none; }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -102,7 +101,7 @@ p {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  font-family: 'Contrail One';
+  font-family: "Contrail One";
   font-size: .85em;
   color: black;
   padding: 8px 16px;
@@ -157,10 +156,9 @@ li {
   text-decoration: none;
   background-color: #FC9A33;
   margin-bottom: 5px; }
-
-.round-button:hover, .round-button:focus {
-  background: #FB4C1A;
-  outline: none; }
+  .round-button:hover, .round-button:focus {
+    background: #FB4C1A;
+    outline: none; }
 
 /* pill button soft orange */
 .pill-button {
