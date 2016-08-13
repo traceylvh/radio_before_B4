@@ -1,15 +1,23 @@
 @import "settings";
+// @import "reset";
 
 @media only screen and (max-width: 400px) {
-  body { font-size:90%;}
+  body {
+    font-size:120%;
+    // width: 80%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   body { font-size:100%;}
 }
 
-@media only screen and (max-width: 1100px) {
-  body { font-size:120%;}
+@media only screen and (min-width: 1100px) {
+  body {
+    font-size:120%;
+    width: 50%;
+    margin: 20px auto;
+  }
 }
 
 body {
@@ -188,10 +196,6 @@ li {
         outline: none;
     }
 }
-// .round-button:hover, .round-button:focus {
-//     background: #FB4C1A;
-//     outline: none;
-// }
 
 /* pill button soft orange */
 .pill-button {
@@ -205,10 +209,10 @@ li {
     text-decoration:none;
     background-color: #FC9A33;
     margin-bottom: 5px;
-}
-.pill-button:hover, .pill-button:focus {
-    background: #FB4C1A;
-    outline: none;
+    &:hover, &:focus {
+        background: #FB4C1A;
+        outline: none;
+    }
 }
 
 /* player button - appears on player pages */
@@ -223,11 +227,10 @@ li {
     text-decoration:none;
     background-color: #fff;
     margin-bottom: 5px;
-}
-
-.player-button:hover, .player-button:focus {
-    background: #E8E8E8;
-    outline: none;
+    &:hover, &:focus {
+        background: #E8E8E8;
+        outline: none;
+    }
 }
 
 /* footer buttons */
@@ -241,11 +244,12 @@ li {
     text-decoration:none;
     background-color: #fff;
     margin: 10px;
+    &:hover, &:focus {
+        background: #E8E8E8;
+        outline: none;
+    }
 }
-.footer-button:hover, .footer-button:focus {
-    background: #E8E8E8;
-    outline: none;
-}
+
 
 /* accordian =====================================================*/
 /*.accordion {
