@@ -1,10 +1,9 @@
 @import "settings";
-// @import "reset";
+@import "reset";
 
 @media only screen and (max-width: 400px) {
   body {
     font-size:120%;
-    // width: 80%;
   }
 }
 
@@ -15,13 +14,17 @@
 @media only screen and (min-width: 1100px) {
   body {
     font-size:120%;
-    width: 50%;
+  }
+  .outline {
+    background-color: red;
+    width: 45%;
     margin: 20px auto;
+    border: solid 3px red;
   }
 }
 
 body {
-  background-color: #fff;
+  background-color: #7d7d7d;
   font-family: sans-serif;
 }
 
@@ -62,11 +65,12 @@ p {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   /*height: 1000px;*/
   margin: auto;
   background-color: #fff;
-  padding-bottom: 60px;
+  padding-bottom: 0 1.5em 60px 1.5em;
+  border: solid 3px #000;
 }
 
 .show-container {
@@ -80,8 +84,9 @@ p {
     border-top: 1px solid #ccc;
     position: fixed;
     text-align: center;
-    left: 0;
-    right: 0;
+    width: 45%;
+    // left: 0;
+    // right: 0;
     bottom: 0;
     height: 60px;
 }

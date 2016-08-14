@@ -1,4 +1,51 @@
 /* colors */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 @media only screen and (max-width: 400px) {
   body {
     font-size: 120%; } }
@@ -7,11 +54,15 @@
     font-size: 100%; } }
 @media only screen and (min-width: 1100px) {
   body {
-    font-size: 120%;
-    width: 50%;
-    margin: 20px auto; } }
+    font-size: 120%; }
+
+  .outline {
+    background-color: red;
+    width: 45%;
+    margin: 20px auto;
+    border: solid 3px red; } }
 body {
-  background-color: #fff;
+  background-color: #7d7d7d;
   font-family: sans-serif; }
 
 h1 {
@@ -44,11 +95,12 @@ p {
   width: 350px; }
 
 .container {
-  width: 90%;
+  width: 100%;
   /*height: 1000px;*/
   margin: auto;
   background-color: #fff;
-  padding-bottom: 60px; }
+  padding-bottom: 0 1.5em 60px 1.5em;
+  border: solid 3px #000; }
 
 .show-container {
   padding-bottom: 5px;
@@ -59,8 +111,7 @@ p {
   border-top: 1px solid #ccc;
   position: fixed;
   text-align: center;
-  left: 0;
-  right: 0;
+  width: 45%;
   bottom: 0;
   height: 60px; }
 
