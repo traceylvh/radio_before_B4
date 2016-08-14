@@ -61,6 +61,13 @@ table {
     width: 45%;
     margin: 20px auto;
     border: solid 3px red; } }
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   background-color: #7d7d7d;
   font-family: sans-serif; }
