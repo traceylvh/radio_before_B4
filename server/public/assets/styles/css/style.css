@@ -58,10 +58,8 @@ table {
     background-image: url("../../images/VintagePatterns.jpg"); }
 
   .outline {
-    background-color: red;
     width: 45%;
-    margin: 20px auto;
-    border: solid 3px red; } }
+    margin: 0 auto; } }
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box; }
@@ -101,11 +99,13 @@ p {
 
 .home-style {
   width: 350px;
-  margin: auto; }
+  margin: auto;
+  height: 500px; }
 
 .home-style img {
   margin-top: 40px;
-  width: 350px; }
+  width: 350px;
+  position: fixed; }
 
 .container {
   width: 100%;
@@ -113,7 +113,8 @@ p {
   margin: auto;
   background-color: #fff;
   padding-bottom: 0 1.5em 60px 1.5em;
-  border: solid 3px #000; }
+  border-left: solid 3px #003835;
+  border-right: solid 3px #003835; }
 
 .show-shell {
   padding: 0 5% 5px 5%; }
@@ -123,10 +124,11 @@ p {
 
 .footer {
   background: #02A388;
-  border-top: 1px solid #ccc;
   position: fixed;
   text-align: center;
-  width: 45%;
+  width: 100%;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 60px; }
 

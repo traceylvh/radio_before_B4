@@ -17,10 +17,11 @@
     background-image: url("../../images/VintagePatterns.jpg");
   }
   .outline {
-    background-color: red;
+    // background-color: #EEE5A9;
     width: 45%;
-    margin: 20px auto;
-    border: solid 3px red;
+    margin: 0 auto;
+    // border: solid 5px #EEE5A9;
+    // border-radius: 19px 19px 0;
   }
 }
 
@@ -71,11 +72,13 @@ p {
 .home-style {
   width: 350px;
   margin: auto;
+  height: 500px;
 }
 
 .home-style img {
   margin-top: 40px;
   width: 350px;
+  position: fixed;
 }
 
 .container {
@@ -84,7 +87,9 @@ p {
   margin: auto;
   background-color: #fff;
   padding-bottom: 0 1.5em 60px 1.5em;
-  border: solid 3px #000;
+  border-left: solid 3px #003835;
+  border-right: solid 3px #003835;
+  // border-radius: 15px 15px 0;
 }
 
 .show-shell {
@@ -98,12 +103,12 @@ p {
 
 .footer {
     background: $mainColor;
-    border-top: 1px solid #ccc;
+    // border-top: 3px solid #003835;
     position: fixed;
     text-align: center;
-    width: 45%;
-    // left: 0;
-    // right: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
     bottom: 0;
     height: 60px;
 }
