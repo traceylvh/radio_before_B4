@@ -1,7 +1,9 @@
 
+<div class="show-shell">
+
   <h1>Nightfall <i class="fa fa-moon-o fa-fw" aria-hidden="true"></i></h1>
-    <div ng-repeat="song in songs | orderBy: 'title' ">
-      <div  class="show-container">
+    <div ng-repeat="song in songs | orderBy: 'title' " class="show-container">
+
         <h2>
             {{ song.title }}
         </h2>
@@ -19,6 +21,6 @@
         <button ng-click="saveFavorite(song); toggle()" class="round-button fa fa-star"></button>
         <button ng-click="openEpisode(song)" class="round-button fa fa-play-circle"></button>
 
-      </div>
-
     </div>
+
+  </div>

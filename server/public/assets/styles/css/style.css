@@ -75,19 +75,24 @@ body {
 
 h1 {
   font-family: "Contrail One";
+  font-size: 1.8em;
   border-bottom: 6px solid #FC9A33;
-  font-size: 1.8em; }
+  padding-bottom: .2em; }
 
 h2 {
   font-family: "Contrail One";
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: .5em; }
 
 h3 {
   font-family: "Contrail One";
   font-size: 1em; }
 
 p {
-  font-size: .9em; }
+  font-size: .9em;
+  margin: 1em 0 .5em 0;
+  line-height: 1.2em; }
 
 .aqua-box {
   background-color: #02A388;
@@ -110,8 +115,10 @@ p {
   padding-bottom: 0 1.5em 60px 1.5em;
   border: solid 3px #000; }
 
+.show-shell {
+  padding: 0 5% 5px 5%; }
+
 .show-container {
-  padding-bottom: 5px;
   border-bottom: 2px dotted #9CAE42; }
 
 .footer {
@@ -148,7 +155,8 @@ p {
 .dropdown {
   float: right;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  padding: 3% 3%; }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -216,7 +224,7 @@ li {
   text-align: center;
   text-decoration: none;
   background-color: #FC9A33;
-  margin-bottom: 5px; }
+  margin-bottom: .5em; }
   .round-button:hover, .round-button:focus {
     background: #FB4C1A;
     outline: none; }
