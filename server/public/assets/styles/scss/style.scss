@@ -7,8 +7,17 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
-  body { font-size:100%;}
+@media only screen and (min-width: 800px) {
+  body {
+    font-size:100%;
+  }
+  .outline {
+    // background-color: #EEE5A9;
+    width: 45%;
+    margin: 0 auto;
+    // border: solid 5px #EEE5A9;
+    // border-radius: 19px 19px 0;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -23,6 +32,16 @@
     // border: solid 5px #EEE5A9;
     // border-radius: 19px 19px 0;
   }
+  .container {
+    width: 100%;
+    /*height: 1000px;*/
+    margin: auto;
+    background-color: #fff;
+    padding: 0 1.5em 60px 1.5em;
+    border-left: solid 3px #003835;
+    border-right: solid 3px #003835;
+    // border-radius: 15px 15px 0;
+  }
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -34,7 +53,7 @@ html {
 }
 
 body {
-  background-color: #7d7d7d;
+  background-color: #fff;
   font-family: sans-serif;
 }
 
@@ -86,10 +105,7 @@ p {
   /*height: 1000px;*/
   margin: auto;
   background-color: #fff;
-  padding-bottom: 0 1.5em 60px 1.5em;
-  border-left: solid 3px #003835;
-  border-right: solid 3px #003835;
-  // border-radius: 15px 15px 0;
+  padding: 0 1.5em 60px 1.5em;
 }
 
 .show-shell {
